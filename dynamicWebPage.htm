@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic webpage using Javascript</title>
+    <style>
+         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: aquamarine;}
+         .color_change { color: blue; font-weight: bold; }
+         .highlight { color: blue; font-weight: bold; }
+    </style>
+</head>
+<body>
+     <div class="color_change">
+        <h1 id="main-heading">Welcome to my Static Page</h1>
+        <button id="color-btn">Change Heading Color</button>
+     </div>
+
+    <h3>Enter Your Name:</h3>
+    <input id="name-input" type="text" placeholder="Type here...">
+    <button id="submit-btn">Submit</button>
+    <p id="greeting-text"></p>
+
+    <button id="add-item-btn">Add List Item</button>
+    <ul id="item-list"></ul>
+
+    <script>
+        // --- Heading Color Logic ---
+        const heading = document.getElementById("main-heading");
+        const colorBtn = document.getElementById("color-btn");
+        
+        colorBtn.addEventListener("click", () => {
+            if (heading.style.color === "red") {
+                heading.style.color = ""; 
+            } else {
+                heading.style.color = "red";  
+            }
+        });
+
+        // --- Name Input Logic ---
+        const nameInput = document.getElementById("name-input");
+        const submitBtn = document.getElementById("submit-btn");
+        const greetingText = document.getElementById("greeting-text");
+        
+        submitBtn.addEventListener("click", () => {
+            const userName = nameInput.value; 
+            if (userName.trim() !== "") {
+                greetingText.innerText = `Hello, ${userName}! Welcome to the dynamic world.`;
+            } else {
+                greetingText.innerText = "Please enter a valid name!";
+            }
+        });
+
+        // --- Add List Item Logic ---
+        const itemList = document.getElementById("item-list");
+        const addItemBtn = document.getElementById("add-item-btn");
+        let itemCount = 1;
+
+        addItemBtn.addEventListener("click", () => {
+            const newItem = document.createElement("li");
+            newItem.innerText = `Dynamic Item #${itemCount}`;
+            newItem.classList.add("highlight"); 
+            itemList.appendChild(newItem);
+            itemCount++;
+        });
+    </script>
+</body>
+</html>
+
