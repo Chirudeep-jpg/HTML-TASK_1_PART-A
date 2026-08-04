@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal - Registration Form</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+    <form action="#" method="POST">
+        
+        <!-- Text and Password Inputs -->
+        <p>
+            <label for="studentName">Full Name:</label><br>
+            <input type="text" id="studentName" name="studentName" required>
+        </p>
+
+        <p>
+            <label for="studentEmail">Email Address:</label><br>
+            <input type="email" id="studentEmail" name="studentEmail" required>
+        </p>
+
+        <p>
+            <label for="studentPassword">Password:</label><br>
+            <input type="password" id="studentPassword" name="studentPassword" required>
+        </p>
+
+        <!-- Radio Buttons (Gender Selection) -->
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </p>
+
+        <!-- Checkboxes (Hobbies Selection) -->
+        <p>
+            <label>Hobbies / Extracurriculars:</label><br>
+            <input type="checkbox" id="coding" name="hobbies" value="coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="hobbies" value="music">
+            <label for="music">Music</label>
+        </p>
+
+        <!-- Dropdown Menu -->
+        <p>
+            <label for="branchDropdown">Select Academic Branch:</label><br>
+            <select id="branchDropdown" name="branch">
+                <option value="">-- Choose Branch --</option>
+                <option value="cse">Computer Science (CSE)</option>
+                <option value="ece">Electronics (ECE)</option>
+                <option value="me">Mechanical (ME)</option>
+                <option value="it">Information Technology (IT)</option>
+            </select>
+        </p>
+
+        <!-- Textarea for comments -->
+        <p>
+            <label for="userComments">Additional Comments:</label><br>
+            <textarea id="userComments" name="userComments" rows="5" cols="40" placeholder="Enter notes here..."></textarea>
+        </p>
+
+        <!-- Form Control Buttons -->
+        <p>
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+        </p>
+
+    </form>
+
+</body>
+              </html>
+                                        
